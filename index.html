@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chocolate Surprise!</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5e3b9; /* Change background color */
+  }
+
+  .special-button {
+    background-color: #f18c8d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px; /* Increase button font size */
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .special-button:hover {
+    background-color: #d87579;
+  }
+
+  #message {
+    display: none; /* Initially hide the message */
+    font-size: 40px; /* Increase message font size */
+    margin-top: 20px; /* Add space between button and message */
+    text-align: center; /* Center align the text */
+  }
+
+  .chocolate-emojis {
+    font-size: 20px; /* Decrease chocolate emoji size */
+    position: absolute;
+    z-index: 1; /* Overlaps text */
+    display: none; /* Initially hide emojis */
+    animation: blink-animation 1s infinite alternate; /* Add blinking animation */
+  }
+
+  @keyframes blink-animation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>You know what's special today!</h1>
+  <button class="special-button" onclick="changeText()">Touch Me 🍫</button>
+  <p id="message">𝑭𝒐𝒓𝒈𝒆𝒕 𝒕𝒉𝒆 𝒅𝒊𝒆𝒕, 𝒊𝒕'𝒔 𝑪𝒉𝒐𝒄𝒐𝒍𝒂𝒕𝒆 𝑫𝒂𝒚 𝒃𝒍𝒊𝒔𝒔, 𝒊𝒏𝒅𝒖𝒍𝒈𝒆 𝒘𝒊𝒕𝒉 𝒎𝒆 𝒊𝒏 𝒂 𝒄𝒉𝒐𝒄𝒐-𝒌𝒊𝒔𝒔!</p>
+  <!-- Increase the number of chocolate emojis -->
+  <span class="chocolate-emojis" id="emoji1"></span>
+  <span class="chocolate-emojis" id="emoji2"></span>
+  <span class="chocolate-emojis" id="emoji3"></span>
+  <span class="chocolate-emojis" id="emoji4"></span>
+  <span class="chocolate-emojis" id="emoji5"></span>
+  <span class="chocolate-emojis" id="emoji6"></span>
+  <span class="chocolate-emojis" id="emoji7"></span>
+  <span class="chocolate-emojis" id="emoji8"></span>
+  <span class="chocolate-emojis" id="emoji9"></span> <!-- Add more chocolate emojis -->
+  <span class="chocolate-emojis" id="emoji10"></span> <!-- Add more chocolate emojis -->
+</body>
+<script>
+let hasTried = false; // To track click count
+
+function changeText() {
+  if (!hasTried) {
+    // First click: Change text to "Try Again!!"
+    document.querySelector("h1").textContent = "Try Again!!";
+    hasTried = true;
+  } else {
+    // Second click: Hide everything, show message and emojis
+    document.querySelector("h1").style.display = "none";
+    document.querySelector(".special-button").style.display = "none";
+
+    document.getElementById("message").style.display = "block";
+
+    // Add emojis at random positions and emoji characters
+    const emojis = ["🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫","🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫", "🍫"];
+    let positions = getRandomPositions();
+    
+    for (let i = 0; i < positions.length; i++) {
+      const emojiSpan = document.getElementById("emoji" + (i + 1));
+      emojiSpan.textContent = emojis[i];
+      emojiSpan.style.top = positions[i].top;
+      emojiSpan.style.left = positions[i].left;
+      emojiSpan.style.display = "inline-block"; // Show each emoji
+    }
+  }
+}
+
+function getRandomPositions() {
+  const positions = [];
+  const maxX = window.innerWidth - 40; // Adjust for emoji size
+  const maxY = window.innerHeight - 40; // Adjust for emoji size
+  for (let i = 0; i < 10; i++) {
+    positions.push({
+      top: Math.floor(Math.random() * maxY) + 'px',
+      left: Math.floor(Math.random() * maxX) + 'px'
+    });
+  }
+  return positions;
+}
+
+// Initial load: Randomize positions
+window.onload = function() {
+  let positions = getRandomPositions();
+  for (let i = 0; i < positions.length; i++) {
+    const emojiSpan = document.getElementById("emoji" + (i + 1));
+    emojiSpan.style.top = positions[i].top;
+    emojiSpan.style.left = positions[i].left;
+  }
+}
+</script>
+</html>
